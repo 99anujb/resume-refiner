@@ -1,0 +1,35 @@
+# env / secrets
+.env
+.env.local
+*.env
+
+# venv
+.venv/
+venv/
+
+# python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# user data — never commit anyone's personal profile or app log
+data/master_profile.json
+data/tracker.db
+data/tailored/
+
+# os
+.DS_Store
+Thumbs.db
+*.swp
+
+# IDE
+.vscode/
+.idea/
+.claude/
+*.iml
+
+# logs
+*.log

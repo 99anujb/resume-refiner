@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cover Letter - {{ name }}</title>
+<style>
+@page { size: Letter; margin: 0.6in; }
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 11pt;
+  line-height: 1.35;
+  color: #111;
+}
+.header {
+  text-align: center;
+  margin-bottom: 8pt;
+}
+.header .name { font-size: 16pt; font-weight: 700; letter-spacing: 1px; }
+.header .meta { font-size: 9.5pt; margin-top: 2pt; }
+p { margin: 0 0 8pt 0; text-align: justify; }
+.body-text { white-space: pre-wrap; }
+a, a:link, a:visited { color: inherit; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="name">{{ name }}</div>
+  <div class="meta"><a href="tel:{{ phone_tel or phone }}">{{ phone }}</a> | <a href="mailto:{{ email }}">{{ email }}</a>{% if linkedin_url %} | <a href="{{ linkedin_url }}">{{ linkedin_label or 'LinkedIn' }}</a>{% endif %}{% if github_url %} | <a href="{{ github_url }}">{{ github_label or 'GitHub' }}</a>{% endif %}{% if portfolio_url %} | <a href="{{ portfolio_url }}">{{ portfolio_label or 'Portfolio' }}</a>{% endif %}</div>
+</div>
+<div class="body-text">{{ body }}</div>
+</body>
+</html>

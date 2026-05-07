@@ -1,0 +1,99 @@
+{
+  "_comment": "Sample master profile. Replace with your own data via the wizard in CLAUDE.md, or edit fields directly. Keep the structure.",
+  "contact": {
+    "name": "JANE DOE",
+    "tagline": "Open to Relocation",
+    "phone": "(555) 555-1234",
+    "phone_tel": "+15555551234",
+    "email": "jane.doe@example.com",
+    "linkedin_label": "LinkedIn",
+    "linkedin_url": "https://www.linkedin.com/in/janedoe/",
+    "github_label": "GitHub",
+    "github_url": "https://github.com/janedoe",
+    "portfolio_label": "Portfolio",
+    "portfolio_url": "https://janedoe.dev"
+  },
+  "role_targets": ["Data Analyst", "Business Analyst", "Data Scientist"],
+  "constraints": {
+    "work_authorization": "US citizen / permanent resident / OPT / H-1B / etc. — fill in honestly",
+    "needs_sponsorship_now": false,
+    "needs_sponsorship_future": false,
+    "visa_status": "fill-in (e.g., USC, GC, OPT, H-1B, TN, ...)",
+    "eligible_countries": ["United States"],
+    "eligible_locations": ["Remote-US", "Hybrid-US", "Onsite-US"],
+    "open_to_relocation": true,
+    "current_location": "City, State, Country",
+    "preferred_locations": ["Anywhere in the US"],
+    "earliest_start": "Immediately",
+    "experience_years": 3,
+    "highest_degree_in_progress": "Optional — e.g., MS Data Science",
+    "deal_breakers": ["Requires citizenship or active clearance you do not have", "Onsite outside your eligible countries", "Employer that explicitly will not sponsor when you need it"]
+  },
+  "summaries": {
+    "data_analyst": "3-4 sentence summary tailored to data-analyst roles. Lead with years of experience + specialization, follow with 2-3 quantified wins, close with credential / strengths.",
+    "business_analyst": "3-4 sentence summary tailored to BA roles. Strategy/process/financial framing.",
+    "data_scientist": "3-4 sentence summary tailored to DS roles. ML/research/modeling framing."
+  },
+  "skills": {
+    "programming": ["Python (Pandas, NumPy, scikit-learn)", "SQL (Joins, CTEs, Window Functions)", "R", "JavaScript"],
+    "machine_learning": ["Random Forest", "XGBoost", "Logistic Regression", "K-Means", "Survival Analysis"],
+    "deep_learning": ["PyTorch", "CNNs", "Transfer Learning"],
+    "interpretability": ["SHAP", "Feature Importance", "Fairness Audits"],
+    "visualization_bi": ["Tableau", "Power BI", "D3.js", "Plotly", "Streamlit", "Excel"],
+    "databases_cloud": ["MySQL", "PostgreSQL", "Snowflake", "AWS"],
+    "enterprise_platforms": ["Add CRM/ERP/HRIS tools you have used (e.g., Salesforce, SAP, Oracle, Workday, HubSpot)"],
+    "deployment_engineering": ["Streamlit", "Flask", "FastAPI", "Docker", "Git", "ETL"],
+    "analytics_techniques": ["EDA", "KPI Tracking", "A/B Testing", "Hypothesis Testing", "Customer Segmentation", "Forecasting"],
+    "business_strategy": ["Strategic Analysis", "Requirements Gathering", "GTM Strategy"],
+    "financial_planning": ["Revenue Forecasting", "Financial Modeling", "ROI Analysis", "M&A Due Diligence"],
+    "tools_workflow": ["Jupyter", "VS Code", "JIRA", "Confluence", "Agile"]
+  },
+  "experience": [
+    {
+      "id": "company-1",
+      "company": "Company Name",
+      "location": "City, Country",
+      "title": "Job Title",
+      "start": "Mon YYYY",
+      "end": "Mon YYYY (or Present)",
+      "bullets": {
+        "data_analyst": [
+          "Bullet for DA framing — start with strong verb, embed metric, end with business impact.",
+          "Bullet 2.",
+          "Bullet 3."
+        ],
+        "business_analyst": ["Same bullets reframed for BA roles."],
+        "data_scientist": ["Same bullets reframed for DS roles."]
+      }
+    }
+  ],
+  "projects": [
+    {
+      "id": "project-1",
+      "title": "Project Title",
+      "subtitle": "Optional Subtitle",
+      "tech": ["Python", "SQL", "Tableau"],
+      "github": "https://github.com/yourname/project-1",
+      "domain": ["analytics", "dashboard"],
+      "metrics": {"records": 10000, "accuracy": "0.85"},
+      "framings": {
+        "data_analyst": "Description tailored for DA framing.",
+        "business_analyst": "Description tailored for BA framing.",
+        "data_scientist": "Description tailored for DS framing."
+      }
+    }
+  ],
+  "education": [
+    {
+      "school": "University Name",
+      "degree": "Degree (e.g., MS Data Science)",
+      "gpa": "3.7",
+      "start": "Sep YYYY",
+      "end": "May YYYY",
+      "coursework": ["Course 1", "Course 2", "Course 3"]
+    }
+  ],
+  "achievements": [
+    "Achievement, award, or leadership role with brief context."
+  ]
+}

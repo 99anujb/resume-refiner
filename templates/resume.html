@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Resume - {{ contact.name }}</title>
+<style>{{ css|safe }}</style>
+</head>
+<body>
+
+<div class="name">{{ contact.name }}</div>
+<div class="contact">
+{% if contact.tagline %}{{ contact.tagline }} | {% endif %}<a href="tel:{{ contact.phone_tel or contact.phone }}">{{ contact.phone }}</a> | <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>{% if contact.linkedin_url %} | <a href="{{ contact.linkedin_url }}">{{ contact.linkedin_label or 'LinkedIn' }}</a>{% endif %}{% if contact.github_url %} | <a href="{{ contact.github_url }}">{{ contact.github_label or 'GitHub' }}</a>{% endif %}{% if contact.portfolio_url %} | <a href="{{ contact.portfolio_url }}">{{ contact.portfolio_label or 'Portfolio' }}</a>{% endif %}
+</div>
+<div class="target-title">{{ target_title }}</div>
+
+<h2 class="section">Professional Summary</h2>
+<p class="summary">{{ summary }}</p>
+
+<h2 class="section">Technical Skills</h2>
+{% for label, items in skills.items() %}
+<div class="skills-row"><span class="label">{{ label }}:</span> {{ items|join(', ') }}</div>
+{% endfor %}
+
+<h2 class="section">Professional Experience</h2>
+{% for e in experience %}
+<div class="exp-block">
+  <div class="exp-header">
+    <span class="exp-company">{{ e.company }}</span>
+    <span class="exp-meta">{{ e.location }}</span>
+  </div>
+  <div class="exp-title-row">
+    <span class="exp-title">{{ e.title }}</span>
+    <span class="exp-meta">{{ e.start }} – {{ e.end }}</span>
+  </div>
+  {% if e.bullets %}<ul>{% for b in e.bullets %}<li>{{ b }}</li>{% endfor %}</ul>{% endif %}
+</div>
+{% endfor %}
+
+<h2 class="section">Key Projects</h2>
+{% for p in projects %}
+<div class="proj-block">
+  <div class="proj-header">{% if p.github %}<a href="{{ p.github }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}{% if p.subtitle %} — {{ p.subtitle }}{% endif %} <span class="proj-tech">| {{ p.tech|join(', ') }}</span></div>
+  <div class="proj-desc">{{ p.description }}</div>
+</div>
+{% endfor %}
+
+<h2 class="section">Education</h2>
+{% for ed in education %}
+<div class="edu-row">
+  <span class="edu-school">{{ ed.school }} — <span class="edu-degree">{{ ed.degree }}{% if ed.gpa %} (GPA: {{ ed.gpa }}){% endif %}</span></span>
+  <span class="exp-meta">{{ ed.start }} – {{ ed.end }}</span>
+</div>
+{% if ed.coursework %}<div class="edu-coursework"><b>Relevant Coursework:</b> {{ ed.coursework|join(', ') }}</div>{% endif %}
+{% endfor %}
+
+{% if achievements %}
+<h2 class="section">Achievements & Leadership</h2>
+<ul class="achievements">
+  {% for a in achievements %}<li>{{ a }}</li>{% endfor %}
+</ul>
+{% endif %}
+
+</body>
+</html>
