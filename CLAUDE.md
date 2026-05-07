@@ -2,6 +2,8 @@
 
 You are running inside this user's resume-refiner project. The user wants to tailor 1-page ATS-aware resumes + cover letters to specific job descriptions. **You (Claude) do all the LLM work inline.** The renderer + tracker are Python tools called via `cli.py`. No external LLM API needed.
 
+**FIRST ACTION:** If `CLAUDE.local.md` exists in this dir, read it before doing anything else. It contains user-specific profile memory, application history, deal-breakers, and feedback that override anything generic in this file. (`*.local.md` is gitignored — private to the user, never pushed to the public repo.)
+
 ---
 
 ## Workflow Overview
