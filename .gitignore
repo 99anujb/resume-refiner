@@ -20,6 +20,11 @@ data/master_profile.json
 data/tracker.db
 data/tailored/
 
+# user's personal copies of public docs (kept local, never pushed)
+*.local.md
+*.local.docx
+*.docx
+
 # os
 .DS_Store
 Thumbs.db
